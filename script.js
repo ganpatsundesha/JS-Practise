@@ -256,3 +256,156 @@ function rotationString(str1, str2) {
 
 // console.log(rotationString("waterbottle", "erbottlewat"));
 // console.log(rotationString("waterbottle", "testMatch"));
+
+
+
+
+/* *************************  Date and Time Questions **********************************/
+
+
+
+// 1. Write a function to get the current date in the format "YYYY-MM-DD".
+
+const date = new Date()
+
+function getDate() {
+    console.log(date.toISOString().slice(0, 10));
+}
+// getDate()
+
+
+
+// 2.  Write a function to get the current time in the format "HH:MM:SS".
+
+function curTime() {
+    const hour = date.getHours()
+    const amPm = hour >= 12 ? 'PM' : "AM"
+    const hours12 = hour % 12 || 12;
+    const minutes = date.getMinutes()
+    const seconds = date.getSeconds()
+
+    return `${String(hours12).padStart(2, "0")}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, "0")} ${amPm}`
+}
+
+// console.log(curTime());
+
+
+
+// 3. Create a function that takes a date string in the format "YYYY-MM-DD" and returns the day of the week (e.g., Monday, Tuesday, etc.).
+
+function takeDate(newDate) {
+    const date = new Date(newDate).getDay()
+    if (date === 0) {
+        return "Sunday"
+    }
+}
+
+// console.log(takeDate("2024-03-03"));
+
+// 4. Create a function to calculate the difference in days between two given dates.
+
+function diffDate(date1, date2) {
+    const d1 = new Date(date1)
+    const d2 = new Date(date2)
+    const diff = d2.getTime() - d1.getTime()
+    return diff / (1000 * 3600 * 24)
+}
+
+// console.log(diffDate("3/12/2024", "3/15/2024"));
+
+
+
+
+
+
+
+
+
+/******************************************************************Array Questions***********************************************************************/
+
+
+
+// 1  Write a function to find the maximum element in an array.
+
+function arrayLength(arr) {
+    return arr.length
+}
+
+// console.log(arrayLength(["NAME", "Youe name", 25, true]));
+
+
+// 2.  Create a function to calculate the sum of all elements in an array.
+
+function sumArry(arr) {
+    let sum = 0;
+    arr.reduce((accumulator, currentValue) => sum = accumulator + currentValue, 0)
+    return sum
+}
+
+// console.log(sumArry([1, 2, 3, 4, 5]));
+
+
+
+// 3. Get diffrent beetwen 2 array 
+
+
+function arrayDiff(a, b) {
+    let difference = [];
+    for (let i = 0; i < a.length; i++) {
+        if (b.indexOf(a[i]) === -1) {
+            difference.push(a[i]);
+        }
+    }
+    return difference;
+};
+
+// console.log(arrayDiff(["205", "251", "256", "334", "907", "480", "520"], ["878", "901", "903", "904", "906", "907",]));
+
+
+
+
+
+// 4. Write a function to remove duplicates from an array.
+
+function removeDeplicates(arr) {
+    return arr.filter((item, index) => arr.indexOf(item) === index)
+}
+
+// console.log(removeDeplicates(["apple", "mango", "apple", "orange", "mango", "mango"]));
+
+
+// 5. Implement a function to reverse an array.
+
+function reverseArray(arr) {
+    return arr.reverse()
+}
+
+// console.log(reverseArray(["apple", "mango", "orange"]));
+
+
+
+
+// 6. Write a function to check if an array is sorted in ascending order.
+
+isAscending = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > arr[i + 1]) {
+            console.log(arr);
+            return false
+        }
+
+    }
+    console.log(arr);
+    return true
+}
+
+// console.log(isAscending(["mango", "apple", "orange"]));
+// console.log(isAscending([1, 2, 5, 7, 9]));
+
+
+
+// 7. Create a function to find the average of all elements in an array.
+
+average = (arr) => {
+
+}
