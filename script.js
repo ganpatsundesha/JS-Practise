@@ -407,5 +407,68 @@ isAscending = (arr) => {
 // 7. Create a function to find the average of all elements in an array.
 
 average = (arr) => {
+    let sum = 0;
+    arr.reduce((acc, cur) => sum = acc + cur, 0)
+    return Math.floor(sum / arr.length)
+}
+
+// console.log(average([1, 2, 3, 4, 5, 6, 7, 8, 9, 40, 50]));
+
+
+// 8. Implement a function to merge two sorted arrays into a single sorted array.
+
+function sortArray(arr1, arr2) {
+    return arr1.concat(arr2)
+}
+
+// console.log(sortArray([1, 2, 3, 4, 5], [6, 7, 8, 9, 40, 50]));
+
+
+
+// 9. Write a function to find the index of a specific element in an array.
+
+function findIndex(arr, index) {
+    return arr.indexOf(index)
+}
+
+console.log(findIndex([1, 2, 3, 4, 5], 1));
+
+
+// 10 Create a function to remove a specific element from an array.
+const newArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+function removeElement(arr, element) {
+    let part1 = arr.slice(0, element)
+    let part2 = arr.slice(element + 1, arr.length)
+    return part1.concat(part2)
+}
+
+// console.log(removeElement(newArray, 80));
+
+
+
+
+
+// 11 Implement a function to rotate an array to the right by a given number of steps.
+
+
+
+// 12 Write a function to sort an array in ascending order using bubble sort algorithm.
+
+function bubbleFunc() {
 
 }
+
+// 13 Create a function to sort an array in descending order using selection sort algorithm.
+// 14 Implement a function to check if two arrays are equal (contain the same elements in the same order).
+// 15 Write a function to find the second largest element in an array.
+// 16 Create a function to find the median of an array.
+// 17 Implement a function to find the mode (most frequent element) in an array.
+// 18 Write a function to find the intersection of two arrays.
+// 19 Create a function to find the union of two arrays.
+// 20 Implement a function to find the difference between two arrays.
+// 21 Write a function to shuffle the elements of an array randomly.
+// 22 Create a function to flatten a nested array.
+// 23 Implement a function to split an array into chunks of a specified size.
+// 24 Write a function to find the index of the first negative number in an array.
+// 25 Create a function to check if an array contains only unique elements.
