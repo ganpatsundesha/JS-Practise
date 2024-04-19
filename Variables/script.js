@@ -14,7 +14,7 @@ const sum = num1 + num2
 const difference = num2 - num1
 const quotient = Math.floor(num1 / num2)
 // Display the results using console.log().
-console.table(sum, difference, quotient);
+// console.table(sum, difference, quotient);
 
 
 // Declare two variables firstName and lastName, and assign them your first and last name respectively.
@@ -22,7 +22,7 @@ const fName = "Ganpat"
 // Concatenate firstName and lastName to form a full name, and store it in a variable fullName.
 const lName = "Sundesha"
 // Display fullName using console.log().
-console.log(fName + " " + lName);
+// console.log(fName + " " + lName);
 
 
 // Declare two variables numA and numB, and assign them any numeric values.
@@ -33,7 +33,7 @@ const isGreaterThen = numA > numB
 const isLessThen = numA < numB
 const isEqual = numA === numB
 // Display the results using console.log().
-console.table(isGreaterThen, isLessThen, isEqual);
+// console.table(isGreaterThen, isLessThen, isEqual);
 
 
 // Declare a variable isAdult and assign a boolean value indicating whether you are an adult or not.
@@ -43,20 +43,20 @@ const hasLicense = true
 // Use logical operators to check if someone is eligible to drive(i.e., they are an adult and have a license).
 const isEligible = isAdult && hasLicense
 // Display the result using console.log().
-console.log(isEligible);
+// console.log(isEligible);
 
 
 // Declare a variable counter and assign it an initial value.
 let counter = 12
 // Use increment and decrement operators to increase and decrease the value of counter.
 counter++
-console.log(counter);
+// console.log(counter);
 counter--
-console.log(counter);
+// console.log(counter);
 ++counter
-console.log(counter);
+// console.log(counter);
 --counter
-console.log(counter);
+// console.log(counter);
 // Display the updated value of counter using console.log() after each operation.
 
 
@@ -65,13 +65,13 @@ const numString = "15"
 // Convert numString to a number and store the result in a variable numValue.
 const numValue = Number(numString)
 // Display the type of numValue using console.log().
-console.log(numValue);
+// console.log(numValue);
 
 
 // Declare a variable emptyString and assign an empty string to it.
 const emptyString = "";
 // Use the Boolean() function to check if emptyString is truthy or falsy.
-console.log(Boolean(emptyString));
+// console.log(Boolean(emptyString));
 // Display the result using console.log().
 
 
@@ -88,12 +88,12 @@ const myFunc = function () {
     console.log("My Function");
 }
 // Use the typeof operator to check the data type of each variable.
-console.log(typeof str);
-console.log(typeof num);
-console.log(typeof boll);
-console.log(typeof arr);
-console.log(typeof obj);
-console.log(typeof myFunc);
+// console.log(typeof str);
+// console.log(typeof num);
+// console.log(typeof boll);
+// console.log(typeof arr);
+// console.log(typeof obj);
+// console.log(typeof myFunc);
 // Display the results using console.log().
 
 
@@ -105,4 +105,20 @@ const d = 8
 // Write an expression involving arithmetic operators(+, -, *, /) and parentheses to calculate a value using these variables.
 const opration = a + b - c * d / b
 // Display the result using console.log().
-console.log(opration);
+// console.log(opration);
+
+
+
+// 1. Write a program to swap the values of two variables without using a third variable.
+
+let name1 = "Gs";
+let name2 = "Gs2";
+
+
+function test() {
+    names = "tey"
+    return names
+}
+
+console.log(test());
+console.log(names);
