@@ -11,3 +11,12 @@
     background: #000;
     position: relative;
 }
+
+#main .container {
+    max-width: 991px;
+    padding: 0 12px;
+}
+
+#main .accordionBox title {
+    
+}
