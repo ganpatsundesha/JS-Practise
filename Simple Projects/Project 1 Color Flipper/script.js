@@ -14,5 +14,5 @@ function generateColor() {
 chnageButton.addEventListener("click", function () {
     let colorCode = generateColor()
     mainBackground.style.backgroundColor = colorCode
-    colorText.innerHTML = `Your Color code:-  ${colorCode.slice(1)}`
+    colorText.innerHTML = `Background Color code:-  ${colorCode.slice(1)}`
 })
