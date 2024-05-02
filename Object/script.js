@@ -38,7 +38,20 @@ const names = {
 
 function returnSameProparty(obj1, obj2) {
 
-    console.log(obj1, obj2)
+    return (obj1, obj2)
 }
 
-returnSameProparty(obj1, names)
+console.log(returnSameProparty(obj1, names));
+
+
+
+
+
+const object1 = { Name: "Rahim", City: 'abc', Country: "India" };
+const object2 = { Name: "Rahim", City: 'abc', Country: "India" };
+
+console.log(isEqual(object1, object2));
+
+
+
+

@@ -454,7 +454,7 @@ function returnProprties(obj) {
     // return Object.keys(obj)
 }
 
-console.log(returnProprties(name));
+// console.log(returnProprties(name));
 
 
 // 3. Write a function that takes two objects as parameters and returns a new object that contains only the properties that are common to both objects.
@@ -472,7 +472,19 @@ const names = {
 
 function returnSameProparty(obj1, obj2) {
 
-    console.log(obj1, obj2)
+    return (obj1, obj2)
 }
 
-returnSameProparty(obj1, names)
+// console.log(returnSameProparty(obj1, names));
+
+
+
+// ************************ Default parameters **************************
+
+// used when an argument is missing or undefined in the function call.
+// Default values are only assigned if the corresponding argument is undefined. Other falsy values such as null, false, 0, or an empty string do not trigger the default value.
+
+
+let nextName = "Ganpat"
+let nextName2 = "Ganpat Sundesha"
+let nextName3 = "Ganpat Sundesha Chenaji"

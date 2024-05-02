@@ -120,5 +120,93 @@ function test() {
     return names
 }
 
-console.log(test());
-console.log(names);
+// console.log(test());
+// console.log(names);
+
+// console.log(null == undefined);
+
+var x = 10;
+function test() {
+    var y = 20;
+}
+
+// console.log(y);
+test();
+
+
+
+
+
+var x = 10;
+function test2() {
+    if (x > 20) {
+        var x = 50;
+    }
+    console.log(x);
+
+}
+// test2();
+
+var x = 10;
+// console.log(x);
+
+if (true) {
+    x = 20;
+    // console.log(x);
+}
+
+// console.log(x);
+
+
+
+
+// function test3() {
+//     if (false) {
+//         var your = 50;
+//     }
+
+//     console.log(your);
+//     console.log(y);
+
+//     var y = 100;
+//     console.log(y);
+// }
+// test3();
+
+
+
+
+
+
+// function test4() {
+//     function foo() {
+//         console.log('foo');
+//     }
+
+//     foo();
+
+//     function foo() {
+//         console.log('test');
+//     }
+// }
+
+// test4();
+
+
+
+
+
+// var nameBox;
+
+// nameBox = function () {
+//     console.log("sdcbh");
+// }
+
+
+
+
+function fun() {
+    console.log(nameLine);
+    var nameLine = 'Mukul Latiyan';
+}
+fun();
