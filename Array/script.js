@@ -207,3 +207,43 @@ function more(arr) {
 }
 
 // console.log(more([50, 100, 150, 200]));
+
+
+
+// 28. How can you double elements of an array? Do not use extra variable?
+
+const array1 = ["one", "two", "three", "four"]
+
+array1.map((item) => {
+    return array1.push(item)
+})
+
+// console.log(array1);
+
+
+
+
+// 29.  How to check if given input is string ?
+
+function checkIsString(element) {
+    const type = typeof element
+    if (type === "string") {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+// console.log(checkIsString("name"));
+
+// 30. How to check if given input is array ?
+
+function isArray(element) {
+    const type = Array.isArray(element)
+    if (type) {
+        return true
+    }
+    return false
+}
+console.log(isArray(["one", "two", "three", "four"]));
