@@ -1,8 +1,25 @@
-let task = document.getElementById("task").value
-let form = document.getElementsByTagName("form")
-console.log(task);
+let task = document.getElementById("task")
+let errorMassage = document.querySelector(".errorMassage")
+const todoList = document.getElementById("taskBox")
+const newDiv = document.createElement("div")
 
-formSubmit = (e) => {
-    e.preventDefault()
-    console.log("ssdcbj");
+let todoTask = []
+
+function formSubmit(e) {
+    e.preventDefault();
+    let value = task.value
+    if (value.length <= 0) {
+        errorMassage.style.opacity = "1";
+    }
+    else {
+        errorMassage.style.opacity = "0";
+        todoTask.push(value)
+        addTask()
+        task.value = ""
+    }
+}
+
+addTask = () => {
+    newDiv.innerHTML = "Task"
+    todoList.appendChild(newDiv);
 }

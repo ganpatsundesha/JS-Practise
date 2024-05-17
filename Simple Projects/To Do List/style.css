@@ -32,6 +32,8 @@
     align-items: center;
     width: 100%;
     gap: 20px;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .todoCard form input[type="text"] {
@@ -68,4 +70,14 @@
     color: #000;
     background: #fff;
     cursor: pointer;
+}
+
+.errorMassage {
+    color: red;
+    font-size: 13px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
 }

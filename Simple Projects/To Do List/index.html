@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faq Project</title>
+    <title>To do Application</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,11 +13,12 @@
         <div class="container">
             <div class="todoCard">
                 <h1>Todo App</h1>
-                <form action="#" onsubmit="formSubmit()">
-                    <input id="task" type="text" placeholder="Enter Your Task Hear..." value="sdcv">
-                    <input type="submit">
+                <form id="form" action="#" onsubmit="formSubmit(event)">
+                    <input id="task" type="text" placeholder="Enter Your Task Hear...">
+                    <input id="submit" type="submit">
+                    <p class="errorMassage">Please Add Your Task</p>
                 </form>
-                <div class="todoList">
+                <div class="todoList" id="taskBox">
                     <div class="todo"></div>
                 </div>
             </div>
