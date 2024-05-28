@@ -20,8 +20,8 @@ window.addEventListener("load", (event) => {
 
 function formSubmit(e) {
     e.preventDefault();
-    let value = task.value
-    if (value.length <= 0) {
+    let value = task.value.trim()
+    if (value.length <= 0 && value.trim().length <= 0) {
         errorMassage.style.display = "block";
     }
     else {
