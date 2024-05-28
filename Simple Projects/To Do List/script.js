@@ -2,9 +2,21 @@ let task = document.getElementById("task")
 let errorMassage = document.querySelector(".errorMassage")
 const todoList = document.getElementById("taskBox")
 
-let todoTask = []
+// LocalStorage Use
+let currentTodos = localStorage.getItem("todos")
+let todoTask = JSON.parse(currentTodos)
+if (!todoTask) {
+    todoTask = []
+}
+
 let editMode = false
 let editId = null
+
+window.addEventListener("load", (event) => {
+    todoTask.forEach((item) => {
+        createTodoDiv(item.id, item.value)
+    })
+});
 
 function formSubmit(e) {
     e.preventDefault();
@@ -25,11 +37,7 @@ function formSubmit(e) {
     }
 }
 
-const addTask = (value) => {
-
-    const id = Date.now()
-    todoTask.push({ id, value });
-
+function createTodoDiv(id, value) {
     const newDiv = document.createElement("div");
     newDiv.classList.add("todo");
     newDiv.setAttribute("data-id", id);
@@ -53,6 +61,18 @@ const addTask = (value) => {
     img1.addEventListener("click", () => editTask(id))
 }
 
+const addTask = (value) => {
+
+    const id = Date.now()
+    todoTask.push({ id, value });
+
+    createTodoDiv(id, value)
+
+    // add to local Storage
+    let stogageTodos = JSON.stringify(todoTask)
+    localStorage.setItem("todos", stogageTodos)
+}
+
 
 function deleteTask(id) {
     const index = todoTask.findIndex(task => task.id === id)
@@ -64,6 +84,8 @@ function deleteTask(id) {
             todoList.removeChild(taskDiv);
         }
     }
+    let stringtTodos = JSON.stringify(todoTask)
+    localStorage.setItem("todos", stringtTodos)
 }
 
 function editTask(id) {
@@ -88,4 +110,6 @@ function updateTask(id, newValue) {
         editMode = false
         editId = null
     }
+    let stringtTodos = JSON.stringify(todoTask)
+    localStorage.setItem("todos", stringtTodos)
 }
