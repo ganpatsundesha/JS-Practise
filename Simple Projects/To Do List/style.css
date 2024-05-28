@@ -84,13 +84,15 @@
 }
 
 #taskBox .todo {
-    padding: 10px 75px 10px 15px;
+    padding: 10px 65px 10px 15px;
     background: #EDF2FC;
     display: block;
     font-size: 18px;
     font-weight: 600;
     position: relative;
     text-transform: capitalize;
+    line-height: 1.2;
+    word-break: break-all;
 }
 
 #taskBox .todo+.todo {
@@ -122,4 +124,20 @@
 #taskBox .todo img:first-child:hover,
 #taskBox .todo img:last-child:hover {
     transform: translateY(-50%) scale(1.2);
+}
+
+@media (max-width: 375px) {
+
+    #main {
+        padding: 12px;
+    }
+
+    .todoCard form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .todoCard form input[type="submit"] {
+        width: 100%;
+    }
 }
