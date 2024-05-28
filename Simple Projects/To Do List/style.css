@@ -10,6 +10,7 @@
     width: 100vw;
     background: #23313f;
     padding: 24px;
+    overflow-x: hidden;
 }
 
 .todoCard {
@@ -79,5 +80,46 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    opacity: 0;
+    display: none;
+}
+
+#taskBox .todo {
+    padding: 10px 75px 10px 15px;
+    background: #EDF2FC;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    text-transform: capitalize;
+}
+
+#taskBox .todo+.todo {
+    margin-top: 12px;
+}
+
+#taskBox .todo img:first-child {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#taskBox .todo img:last-child {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#taskBox .todo img:first-child:hover,
+#taskBox .todo img:last-child:hover {
+    transform: translateY(-50%) scale(1.2);
 }
