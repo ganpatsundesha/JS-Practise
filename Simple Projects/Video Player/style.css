@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    background: #23313f;
+    padding: 24px;
+    overflow-x: hidden;
+}
+
+.videoPlayer {
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.videoPlayer video {
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.videoPlayer img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.videoPlayer #pause {
+    display: none;
+    transition: all 0.4s;
+}
